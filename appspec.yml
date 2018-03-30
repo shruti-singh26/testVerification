@@ -3,8 +3,7 @@ os: linux
 files:
   - source: dthconnection.war
     destination: /usr/share/tomcat7/webapps/
-  - source: /scripts/configure_http_port.xsl
-    destination: /usr/share/tomcat7/conf
+
 hooks:
   ApplicationStop:
     - location: scripts/stop_application
