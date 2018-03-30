@@ -48,7 +48,7 @@ cat > /etc/init.d/tomcat7 <<'EOF'
 # processname: tomcat7
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
-CATALINA_HOME='/usr/share/tomcat7-codedeploy'
+CATALINA_HOME='/usr/share/tomcat7'
 
 case $1 in
 start)
