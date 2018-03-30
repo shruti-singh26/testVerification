@@ -2,20 +2,20 @@
 
 set -e
 
-CATALINA_HOME=/usr/share/tomcat7-codedeploy
-TOMCAT_VERSION=7.0.77
+CATALINA_HOME=/usr/share/tomcat7
+TOMCAT_VERSION=7.0.85
 
 # Tar file name
 TOMCAT7_CORE_TAR_FILENAME="apache-tomcat-$TOMCAT_VERSION.tar.gz"
 # Download URL for Tomcat7 core
-TOMCAT7_CORE_DOWNLOAD_URL="http://mirror.olnevhost.net/pub/apache/tomcat/tomcat-7/v$TOMCAT_VERSION/bin/$TOMCAT7_CORE_TAR_FILENAME"
+TOMCAT7_CORE_DOWNLOAD_URL="http://mirror.jax.hugeserver.com/apache/tomcat/tomcat-7/v7.0.85/bin/apache-tomcat-7.0.85.tar.gz"
 # The top-level directory after unpacking the tar file
 TOMCAT7_CORE_UNPACKED_DIRNAME="apache-tomcat-$TOMCAT_VERSION"
 
 
 # Check whether there exists a valid instance
 # of Tomcat7 installed at the specified directory
-[[ -d $CATALINA_HOME ]] && { service tomcat7 status; } && {
+[[ -d $CATALINA_HOME ]] && { service tomcat8 status; } && {
     echo "Tomcat7 is already installed at $CATALINA_HOME. Skip reinstalling it."
     exit 0
 }

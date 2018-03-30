@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/ATMApplicationForWeb.war
-    destination: /tmp/codedeploy-deployment-staging-area/
+  - source: /dthconnection.war
+    destination: /usr/share/tomcat8/webapps/
   - source: /scripts/configure_http_port.xsl
-    destination: /tmp/codedeploy-deployment-staging-area/
+    destination: /usr/share/tomcat8/conf
 hooks:
   ApplicationStop:
     - location: scripts/stop_application
