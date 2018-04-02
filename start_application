@@ -2,7 +2,7 @@
 
 set -e
 
-CATALINA_HOME='/usr/share/tomcat7-codedeploy'
+CATALINA_HOME='/usr/share/tomcat7'
 DEPLOY_TO_ROOT='false'
 CONTEXT_PATH='dthconnection'
 SERVER_HTTP_PORT='80'
